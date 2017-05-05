@@ -1,0 +1,25 @@
+{
+  "name": "needo",
+  "version": "0.2.0",
+  "description": "An interest integrator inspired by Hack #14 from the book 'Mindhacker' by Ron and Marty Hale-Evans",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tdreid/needo.git"
+  },
+  "author": "trevor.d.reid@gmail.com",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/tdreid/needo/issues"
+  },
+  "homepage": "https://github.com/tdreid/needo#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "firebase": "^3.9.0",
+    "firebase-admin": "^4.2.1",
+    "pug": "^2.0.0-rc.1"
+  }
+}
