@@ -5,7 +5,8 @@ html
     title Needo | An interest integrator
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css")
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")  
-    link(rel="stylesheet" href="custom.css") 
+    link(rel="stylesheet" href="custom.css")
+    script(type="text/javascript" src="https://cdn.jsdelivr.net/g/jquery")
   body
     div(class="container")
       div(class="row")
@@ -15,3 +16,7 @@ html
           br
           button(id="search-button") Integrate Interests
           button(id="add-button") Add Interest
+          script.
+           $(document).ready(function() {
+              console.log('Logged this');
+            });
