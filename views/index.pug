@@ -16,6 +16,9 @@ html
           br
           button(id="search-button") Integrate Interests
           button(id="add-button") Add Interest
+          ul
+            each item in interests
+              li= item.interest
           script.
            $(document).ready(function() {
               console.log('Logged this');
