@@ -17,7 +17,8 @@ app.set('view engine', 'pug');
 app.use(express.static('static'));
 
 app.get('/c/:newInterest', (req,res) => {
-  console.log('New interest received:',req.params.newInterest);
+   databaseReference.push(req.params.newInterest);
+   res.send(JSON.stringify(req.params.newInterest));
 });
 
 app.get('/', function(req,res){
