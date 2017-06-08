@@ -16,10 +16,11 @@ html
           br
           button(id="search-button") Integrate Interests
           button(id="add-button") Add Interest
-          ul
+      div(class="row")
+        div(class="col-xs-5")
+        div(class="col-xs-2")
+          ul(class="fa-ul")
             each item in interests
-              li= item.interest
-          script.
-           $(document).ready(function() {
-              console.log('Logged this');
-            });
+              li= item
+                i(class="fa-li fa fa-caret-right")
+        div(class="col-xs-5")

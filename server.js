@@ -8,8 +8,6 @@ firebase.initializeApp({
 });
 var databaseReference = firebase.database().ref().child('interests');
 
-var listOfInterests = [];
-
 var express = require('express');
 var app = express();
 app.set('view engine', 'pug');
@@ -22,17 +20,14 @@ app.get('/c/:newInterest', (req,res) => {
 });
 
 app.get('/', function(req,res){
-    console.log('route "/" hit');
     databaseReference.once("value",snapshot => {
-      console.log('db got values');
+      var listOfInterests = [];
       snapshot.forEach(child => {
-        console.log('pushing value', child.val());
         listOfInterests.push(child.val());
       });
+      res.render('index', { interests:listOfInterests });
     });
-    res.render('index', { interests:listOfInterests });
 });
-
 
 app.listen(process.env.PORT, function () {
   console.log('Needo listening on port '+ process.env.PORT);
