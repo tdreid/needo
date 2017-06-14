@@ -20,13 +20,7 @@ app.get('/c/:newInterest', (req,res) => {
 });
 
 app.get('/', function(req,res){
-    databaseReference.once("value",snapshot => {
-      var listOfInterests = [];
-      snapshot.forEach(child => {
-        listOfInterests.push(child.val());
-      });
-      res.render('index', { interests:listOfInterests });
-    });
+      res.render('index',{ clientKey : process.env.CLIENTKEY });
 });
 
 app.listen(process.env.PORT, function () {
